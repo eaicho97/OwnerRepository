@@ -5,12 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name = "owners")
 public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String owner_name;
     private String phone;
 
     public Long getId() {
@@ -22,11 +22,11 @@ public class Owner {
     }
 
     public String getName() {
-        return name;
+        return owner_name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.owner_name = name;
     }
 
     public String getPhone() {
